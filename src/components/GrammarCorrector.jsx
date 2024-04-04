@@ -4,7 +4,7 @@ function GrammarCorrector() {
 
     const [message, setMessage] = useState("");
     const [sentence, setSentence] = useState("");
-    const API_KEY = import.meta.env.APP_ENV;
+    const API_KEY = import.meta.env.VITE_APP_ENV;
 
     async function grammarChecker () {
 

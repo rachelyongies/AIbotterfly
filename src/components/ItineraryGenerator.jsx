@@ -16,7 +16,7 @@ import { useState } from 'react'
 
     const [generatedItinerary, setGeneratedItinerary] = useState("");
     
-    const API_KEY = import.meta.env.APP_ENV;
+    const API_KEY = import.meta.env.VITE_APP_ENV;
 
     function getNextStepQuestion () {
       switch (step) {
