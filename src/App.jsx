@@ -43,7 +43,7 @@ function App() {
     <NextUIProvider>
       <div className='App'>
 
-      <h2 className="space-mono-regular">AIbotterfly Beta v1.0</h2>
+      <h2 className="space-mono-regular">Rachel's Robot beta</h2>
         
       <Tabs aria-label="Dynamic tabs" items={tabs} color="primary" className="space-mono-regular">
 
