@@ -1,8 +1,4 @@
-# React + Vite
+# AIbotterfly
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project uses OpenAI's APIs to generate chat, image, synonyms. The various use cases are inspired by common daily problems faced by peers around me. 
+It is built with vite and nextUI. 
