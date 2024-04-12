@@ -3,6 +3,7 @@ import { useState } from 'react'
  function ItineraryGenerator() {
 
     const [step, setStep] = useState(1);
+    const [text, setText] = useState("");
     const [userData, setUserData] = useState({
       country: "",
       adjective: "",
@@ -31,24 +32,35 @@ import { useState } from 'react'
       }
     };
 
+    // const handleChange = (event) => {
+    //   const newValue = event.target.value;
+    //   if (step===1) {
+    //     setCountry(newValue)
+    //   } else if (step===2) {
+    //     setAdjective(newValue)
+    //   } else {
+    //     setPeriod(newValue)
+    //   }
+    // };
     const handleChange = (event) => {
-      const newValue = event.target.value;
-      if (step===1) {
-        setCountry(newValue)
-      } else if (step===2) {
-        setAdjective(newValue)
-      } else {
-        setPeriod(newValue)
-      }
+      setText(event.target.value);
     };
 
     const handleUpdateUserData = () => {
+       if (step===1) {
+        setCountry(text)
+      } else if (step===2) {
+        setAdjective(text)
+      } else {
+        setPeriod(text)
+      }
       setUserData({
         country: country,
         adjective: adjective,
         period: period
       })
       setStep(prevStep => prevStep+1)
+      setText("")
     }
 
     async function itineraryGenerator () {
@@ -94,7 +106,7 @@ import { useState } from 'react'
       <>
         <h4 className="space-mono-regular" color="primary">{getNextStepQuestion()}</h4>
         <textarea
-        value={userData[step-1]}
+        value={text}
         onChange={(e)=>handleChange(e)}
         cols={50}
         rows={10}
